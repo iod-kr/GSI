@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
-set GSI_REPO_URL=https://github.com/project-gsi/gsi-installer.git
+set GSI_REPO_URL=https://github.com/iod-kr/GSI.git
 set GSI_REPO_BRANCH=main
 set INSTALL_ROOT=%ProgramData%\GSI
 set APP_ROOT=%INSTALL_ROOT%\app

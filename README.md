@@ -44,6 +44,9 @@ sudo bash bootstrap/install.sh
   - 10) 서버 오픈 알림/서버 쉘
 - 업데이트 체크 고정 URL은 `gsi/cli.py`의 `INSTALLER_UPDATE_URL` 상수입니다.
 - 설치기 고정 GitHub 저장소 URL은 `bootstrap/install.sh`/`bootstrap/install.bat` 상수에 정의되어 있습니다.
+- 현재 기준:
+  - GitHub 저장소: `https://github.com/iod-kr/GSI.git`
+  - 업데이트 메타: `https://raw.githubusercontent.com/iod-kr/GSI/main/installer-version.json`
 
 비대화형 예시(설치만, 실행 생략):
 ```bash

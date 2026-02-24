@@ -16,8 +16,8 @@ from typing import Any
 from . import __version__
 from .engine import EngineError, InstallerEngine
 
-INSTALLER_UPDATE_URL = "https://raw.githubusercontent.com/project-gsi/gsi-installer/main/installer-version.json"
-GSI_GITHUB_REPO_URL = "https://github.com/project-gsi/gsi-installer.git"
+INSTALLER_UPDATE_URL = "https://raw.githubusercontent.com/iod-kr/GSI/main/installer-version.json"
+GSI_GITHUB_REPO_URL = "https://github.com/iod-kr/GSI.git"
 
 EULA_GUIDE: dict[str, str] = {
     "minecraft": (

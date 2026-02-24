@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-GSI_REPO_URL="https://github.com/project-gsi/gsi-installer.git"
+GSI_REPO_URL="https://github.com/iod-kr/GSI.git"
 GSI_REPO_BRANCH="main"
 INSTALL_ROOT="/opt/gsi"
 APP_ROOT="$INSTALL_ROOT/app"
