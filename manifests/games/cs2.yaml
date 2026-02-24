@@ -1,0 +1,53 @@
+id: cs2
+name: Counter-Strike 2
+description: Counter-Strike 2 dedicated server
+default_mode: docker
+version_options:
+  default: latest
+  choices:
+    - latest
+dependency_options:
+  steamcmd:
+    default: latest
+    choices:
+      - latest
+defaults:
+  ports:
+    game: 27015
+    tv: 27020
+modes:
+  docker:
+    requirements:
+      - docker
+    image: joedwards32/cs2:latest
+    env:
+      SRCDS_HOSTNAME: "{server_name}"
+      SRCDS_MAXPLAYERS: "16"
+      SRCDS_MAP: de_mirage
+      STEAMAPPVALIDATE: "0"
+      GSI_GAME_VERSION: "{game_version}"
+      GSI_DEP_STEAMCMD_VERSION: "{dep_steamcmd_version}"
+    port_map:
+      game: 27015
+      tv: 27020
+    volumes:
+      - "{data_dir}:/home/steam/cs2-dedicated"
+  native:
+    requirements:
+      - bash
+      - steamcmd
+    commands:
+      install:
+        linux:
+          - "mkdir -p '{data_dir}'"
+          - "echo 'CS2 native 설치 스크립트를 여기에 확장하세요.'"
+          - "echo '선택된 버전: {game_version}, steamcmd: {dep_steamcmd_version}'"
+      start:
+        linux:
+          - "echo 'CS2 native start 스크립트를 추가하세요.'"
+      stop:
+        linux:
+          - "echo 'CS2 native stop 스크립트를 추가하세요.'"
+      update:
+        linux:
+          - "echo 'CS2 native update 스크립트를 추가하세요.'"

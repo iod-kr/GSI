@@ -1,0 +1,54 @@
+id: valheim
+name: Valheim
+description: Valheim dedicated server
+default_mode: docker
+version_options:
+  default: latest
+  choices:
+    - latest
+dependency_options:
+  steamcmd:
+    default: latest
+    choices:
+      - latest
+defaults:
+  ports:
+    game: 2456
+    query: 2457
+modes:
+  docker:
+    requirements:
+      - docker
+    image: ghcr.io/lloesche/valheim-server:latest
+    env:
+      SERVER_NAME: "{server_name}"
+      WORLD_NAME: "{instance_id}"
+      SERVER_PASS: ChangeMe123
+      SERVER_PUBLIC: "1"
+      GSI_GAME_VERSION: "{game_version}"
+      GSI_DEP_STEAMCMD_VERSION: "{dep_steamcmd_version}"
+      TZ: UTC
+    port_map:
+      game: 2456
+      query: 2457
+    volumes:
+      - "{data_dir}:/config"
+  native:
+    requirements:
+      - bash
+      - steamcmd
+    commands:
+      install:
+        linux:
+          - "mkdir -p '{data_dir}'"
+          - "echo 'Valheim native 설치 스크립트를 여기에 확장하세요.'"
+          - "echo '선택된 버전: {game_version}, steamcmd: {dep_steamcmd_version}'"
+      start:
+        linux:
+          - "echo 'Valheim native start 스크립트를 추가하세요.'"
+      stop:
+        linux:
+          - "echo 'Valheim native stop 스크립트를 추가하세요.'"
+      update:
+        linux:
+          - "echo 'Valheim native update 스크립트를 추가하세요.'"

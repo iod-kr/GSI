@@ -1,0 +1,52 @@
+id: palworld
+name: Palworld
+description: Palworld dedicated server
+default_mode: docker
+version_options:
+  default: latest
+  choices:
+    - latest
+dependency_options:
+  steamcmd:
+    default: latest
+    choices:
+      - latest
+defaults:
+  ports:
+    game: 8211
+modes:
+  docker:
+    requirements:
+      - docker
+    image: thijsvanloef/palworld-server-docker:latest
+    env:
+      SERVER_NAME: "{server_name}"
+      PORT: "{game_port}"
+      PLAYERS: "16"
+      COMMUNITY: "false"
+      PALWORLD_EULA: "{palworld_eula}"
+      GSI_GAME_VERSION: "{game_version}"
+      GSI_DEP_STEAMCMD_VERSION: "{dep_steamcmd_version}"
+    port_map:
+      game: 8211
+    volumes:
+      - "{data_dir}:/palworld"
+  native:
+    requirements:
+      - bash
+      - steamcmd
+    commands:
+      install:
+        linux:
+          - "mkdir -p '{data_dir}'"
+          - "echo 'Palworld native 설치 스크립트를 여기에 확장하세요.'"
+          - "echo '선택된 버전: {game_version}, steamcmd: {dep_steamcmd_version}'"
+      start:
+        linux:
+          - "echo 'Palworld native start 스크립트를 추가하세요.'"
+      stop:
+        linux:
+          - "echo 'Palworld native stop 스크립트를 추가하세요.'"
+      update:
+        linux:
+          - "echo 'Palworld native update 스크립트를 추가하세요.'"

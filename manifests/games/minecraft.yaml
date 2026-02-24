@@ -1,0 +1,54 @@
+id: minecraft
+name: Minecraft Java
+description: Minecraft Java dedicated server
+default_mode: docker
+version_options:
+  default: LATEST
+  choices:
+    - LATEST
+    - "1.21.4"
+    - "1.20.6"
+dependency_options:
+  java:
+    default: "21"
+    choices:
+      - "17"
+      - "21"
+defaults:
+  ports:
+    game: 25565
+modes:
+  docker:
+    requirements:
+      - docker
+    image: itzg/minecraft-server:latest
+    env:
+      EULA: "{minecraft_eula}"
+      TYPE: PAPER
+      VERSION: "{game_version}"
+      GSI_DEP_JAVA_VERSION: "{dep_java_version}"
+      TZ: UTC
+      MEMORY: 2G
+    port_map:
+      game: 25565
+    volumes:
+      - "{data_dir}:/data"
+  native:
+    requirements:
+      - bash
+      - java
+    commands:
+      install:
+        linux:
+          - "mkdir -p '{data_dir}'"
+          - "echo 'server.jar를 {data_dir}/server.jar 로 배치하면 start.sh 실행 가능합니다.'"
+          - "echo '선택된 Minecraft 버전: {game_version}, Java 버전: {dep_java_version}'"
+      start:
+        linux:
+          - "cd '{data_dir}' && java -Xms1G -Xmx2G -jar server.jar nogui"
+      stop:
+        linux:
+          - "echo 'Minecraft native stop은 콘솔/rcon에서 수행하세요.'"
+      update:
+        linux:
+          - "echo 'Minecraft native update는 server.jar 교체 후 재시작하세요.'"
