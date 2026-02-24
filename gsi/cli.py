@@ -296,6 +296,11 @@ def _check_installer_update() -> None:
                 print(f"- 릴리스 노트: {notes}")
     except urllib.error.URLError as exc:
         print(f"[WARN][E1001] 업데이트 확인 실패(네트워크/주소): {exc}")
+        if "404" in str(exc):
+            print(
+                "[WARN][E1006] 업데이트 메타 URL이 비공개 저장소이거나 아직 배포되지 않았을 수 있습니다. "
+                "GitHub 저장소 접근 권한/파일 경로를 확인하세요."
+            )
     except json.JSONDecodeError as exc:
         print(f"[WARN][E1005] 업데이트 응답 JSON 파싱 실패: {exc}")
 
