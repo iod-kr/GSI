@@ -17,6 +17,7 @@ CLI 기반 게임 서버 설치기입니다.
 - 설치 시 다운로드 자동 진행(Docker 모드: 이미지 pull)
 - 게임 서버 버전 선택(`--game-version`)
 - 추가 종속성 버전 선택(`--dep-versions`, 예: Java/SteamCMD)
+- 언어 자동 감지(`--lang auto|ko|en`, 환경 변수 `GSI_LANG` 우선)
 - 인스턴스별 운영 스크립트 자동 생성(`start/stop/update/backup/restore`)
 - EULA 자동 동의 옵션(`--auto-eula`)
   - Minecraft는 `eula.txt` 자동 생성(`eula=true`)
@@ -27,10 +28,15 @@ cd /home/project/gsi
 sudo bash bootstrap/install.sh
 ```
 - 고정 GitHub 저장소에서 설치/업데이트 후 실행합니다.
+- 설치형 스크립트는 비대화형 Git 동작(`GIT_TERMINAL_PROMPT=0`)으로 동작합니다.
+- 인증 방식
+  - 기본: HTTPS 익명 인증(공개 저장소)
+  - 비공개 저장소 대안 1: `GSI_GITHUB_TOKEN` 환경변수 설정 시 비대화형 HTTPS 토큰 인증
+  - 비공개 저장소 대안 2: `GSI_USE_SSH=1` 설정 시 SSH 인증 강제
 - 옵션 없이 실행하면 배너 + 단계형 대화형 설치 메뉴가 열립니다.
 - 설치 완료 후 현재 인스턴스 목록을 바로 확인할 수 있습니다.
 - 대화형 메뉴는 아래 10단계로 진행됩니다.
-  - 1) 설치기 업데이트 확인(고정 GitHub URL)
+  - 1) 설치기 업데이트 확인(GitHub Release 최신 버전 자동 확인)
   - 2) SDK/의존성 확인
     - 누락 항목이 있으면 자동 설치 시도 여부를 사용자에게 묻고 진행
     - 실패 시 오류 코드/사유를 출력
@@ -42,11 +48,11 @@ sudo bash bootstrap/install.sh
   - 8) 네트워크 개방 작업
   - 9) 외부 접속/포트 체크
   - 10) 서버 오픈 알림/서버 쉘
-- 업데이트 체크 고정 URL은 `gsi/cli.py`의 `INSTALLER_UPDATE_URL` 상수입니다.
+- 업데이트 체크는 `gsi/cli.py`의 `GITHUB_RELEASE_LATEST_API`(GitHub Releases API)로 동작합니다.
 - 설치기 고정 GitHub 저장소 URL은 `bootstrap/install.sh`/`bootstrap/install.bat` 상수에 정의되어 있습니다.
 - 현재 기준:
   - GitHub 저장소: `https://github.com/iod-kr/GSI.git`
-  - 업데이트 메타: `https://raw.githubusercontent.com/iod-kr/GSI/main/installer-version.json`
+  - 최신 릴리스 API: `https://api.github.com/repos/iod-kr/GSI/releases/latest`
 
 비대화형 예시(설치만, 실행 생략):
 ```bash
@@ -58,6 +64,7 @@ sudo bash bootstrap/install.sh --skip-run
 ```bash
 sudo bash bootstrap/install.sh -- catalog
 sudo bash bootstrap/install.sh -- menu
+sudo bash bootstrap/install.sh -- --lang auto menu
 ```
 
 ## Windows(CMD) 사용
