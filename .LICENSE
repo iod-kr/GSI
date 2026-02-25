@@ -1,0 +1,198 @@
+Network Copyleft License (NCL) v0.1
+Copyright (c) 2026 IoD
+
+Permission is granted to any person or entity obtaining a copy of the
+Program (as defined below) to use, copy, modify, and distribute it,
+subject to the conditions of this License.
+
+IMPORTANT NOTICE:
+This is a custom license inspired by copyleft/network-copyleft concepts.
+It is NOT the GNU Affero General Public License (AGPL), and must not be
+presented as "GNU AGPL" or "AGPL".
+
+0. Preamble
+
+This License permits use, copying, modification, and distribution of software,
+while requiring that when modified versions or derivative works are distributed
+or made available for remote network interaction, users are offered access to
+the corresponding source code. Its purpose is to ensure reciprocity and
+community benefit.
+
+1. Definitions
+
+1.1 "Program" means the software work licensed under this License.
+
+1.2 "Licensor" means a person or entity authorized to grant this License
+for the Program.
+
+1.3 "Modify" or "Modification" means to alter, adapt, translate, combine,
+or otherwise create a version requiring copyright permission.
+
+1.4 "Modified Version" means the whole work resulting from a Modification.
+
+1.5 "Derivative Work" means a copyright derivative based on the Program or
+any substantial part of it.
+
+1.6 "Distribute" (or "Convey") means making the Program or a Modified Version
+available to a third party by any means, including copies, downloads,
+repository access, or transmission.
+
+1.7 "Object Code" means any non-source, machine-executable or machine-
+processable form.
+
+1.8 "Corresponding Source" means the source code and other materials
+reasonably necessary to build, install, run, and modify the Object Code,
+including build scripts, interface definitions, and configuration files,
+but excluding generally available system components.
+
+1.9 "Remote Network Interaction" means a user's interaction with Program
+functionality over a computer network.
+
+1.10 "Covered Work" means the Program, any Modified Version, and any
+Derivative Work licensed under this License.
+
+2. Grant of Rights
+
+Subject to the terms of this License, the Licensor grants each recipient a
+worldwide, royalty-free, non-exclusive license to:
+
+(a) run the Program;
+(b) copy the Program;
+(c) modify the Program; and
+(d) distribute the Program and Modified Versions.
+
+Any rights not expressly granted are reserved.
+
+3. Conditions for Copying and Distributing the Original Program
+
+If you copy or distribute the unmodified Program, you must:
+
+(a) retain copyright notices, license notices, and disclaimers;
+(b) provide a copy of this License;
+(c) not impose additional restrictions on recipients' rights under this License; and
+(d) not charge royalties for the exercise of rights granted by this License
+    (you may charge fees for support, media, hosting, or distribution services).
+
+4. Conditions for Modified Versions and Derivative Works (Copyleft)
+
+If you distribute a Modified Version or Derivative Work, you must:
+
+(a) clearly indicate that changes were made;
+(b) identify the date of changes (and preferably the modifier);
+(c) license the entire Covered Work under this License;
+(d) provide recipients the same rights granted by this License; and
+(e) not impose additional restrictions that contradict this License.
+
+If distributing Object Code, you must also provide the Corresponding Source
+by one of the following methods:
+
+(i) together with the Object Code;
+(ii) from the same location at no charge; or
+(iii) via a written/electronic offer valid for at least three (3) years.
+
+5. Remote Network Interaction Source Offer
+
+If you operate a Modified Version and users interact with it remotely through
+a computer network, you must prominently offer those users an opportunity to
+receive the Corresponding Source of your Modified Version at no charge
+(excluding ordinary network access costs), through a standard or customary
+means of software copying.
+
+For web-based services, a visible link or menu item such as "Source Code",
+"Source", or "License & Source" is recommended.
+
+This section does not apply to purely internal use where no third party
+remotely interacts with the Modified Version.
+
+6. Scope of Corresponding Source
+
+Corresponding Source ordinarily includes:
+
+(a) modified source files;
+(b) build, packaging, and deployment scripts;
+(c) interface definitions and configuration files; and
+(d) installation information, where reasonably necessary to install and run
+    modified versions in a controlled device or environment.
+
+Corresponding Source need not include:
+
+(i) general-purpose operating system components;
+(ii) unmodified, generally available tools; or
+(iii) independent works that are not part of the Covered Work.
+
+7. Notices
+
+When distributing or providing a Covered Work through Remote Network
+Interaction, you must reasonably display:
+
+(a) copyright notice(s);
+(b) notice that the work is licensed under this License;
+(c) warranty disclaimer and limitation of liability notice; and
+(d) source access information, if applicable.
+
+8. Patent License (Optional Clause)
+
+Each contributor grants a non-exclusive, worldwide, royalty-free patent
+license for patent claims necessarily infringed by the contributor's
+contribution, solely to the extent required to exercise rights granted under
+this License.
+
+You may not use patent claims to restrict recipients from exercising rights
+granted by this License.
+
+9. Trademark Reservation
+
+This License grants no rights in trademarks, service marks, trade names, or
+logos of the Licensor or contributors, except for reasonable and factual use
+for attribution.
+
+10. Additional Permissions
+
+The Licensor may grant additional permissions for specified files, modules,
+or uses by a separate written notice. Such permissions apply only to the
+extent expressly stated and do not alter this License for the remaining
+portions of the Covered Work.
+
+Withdrawal of additional permissions for future distributions does not
+retroactively revoke permissions for copies already lawfully received.
+
+11. Termination and Cure
+
+Your rights under this License terminate automatically upon violation of its
+terms.
+
+If you cease the violation and cure it within thirty (30) days after
+receiving notice, your rights may be reinstated unless the Licensor expressly
+and finally terminates them in writing.
+
+A first-time violation that is promptly cured in good faith should, where
+reasonable, be treated as curable.
+
+12. Disclaimer of Warranty
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COVERED WORK IS
+PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+13. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, NO COPYRIGHT HOLDER,
+LICENSOR, OR CONTRIBUTOR SHALL BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE
+OF OR INABILITY TO USE THE COVERED WORK, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES.
+
+14. Severability
+
+If any provision of this License is held unenforceable, the remainder shall
+remain in effect, and the unenforceable provision shall be interpreted or
+reformed to the minimum extent necessary to preserve the intent of this
+License.
+
+15. Versions
+
+The Licensor may publish revised versions of this License.
+
+If a Program states "NCL vX.Y only", only that version applies.
+If a Program states "NCL vX.Y or later", recipients may choose that version
+or any later version designated by the Licensor.
